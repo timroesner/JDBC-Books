@@ -32,3 +32,9 @@ In this project, using JDBC application that access an installed RDBMS (you need
 :black_square_button: One/two page documentation of the implementation  
 :black_square_button: Print out two copies of documentation and output  
 :black_square_button: Turn in during class Dec 5  
+
+## Guidelines
+1. Open an issue when you start working on one of the queries
+2. You can work on it in a fork or branch
+3. Submit a PR when you finished and tested your code and want to merge
+4. Update the To-Do accordingly
