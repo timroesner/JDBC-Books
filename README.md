@@ -19,7 +19,7 @@ In this project, using JDBC application that access an installed RDBMS (you need
 ## To-Do
 :white_check_mark: Initialize repo  
 :black_square_button: Create database  
-:black_square_button: Compile demo data for tables  
+:white_check_mark: Compile demo data for tables  
 :black_square_button: Initialize tables with demo data  
 :black_square_button: Code: Query 1  
 :black_square_button: Code: Query 2  
