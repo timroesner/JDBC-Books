@@ -43,7 +43,7 @@ If you are catching other exepctions make sure to put the close statement into t
 ## To-Do
 :white_check_mark: Initialize repo  
 :white_check_mark: Create database  
-:white_check_mark: Compile demo data for tables 
+:white_check_mark: Compile demo data for tables  
 :white_check_mark: Created tables    
 :black_square_button: Initialize tables with demo data  
 :black_square_button: Code: Query 1  
