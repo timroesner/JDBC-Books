@@ -16,9 +16,14 @@ In this project, using JDBC application that access an installed RDBMS (you need
   * 7. Add new publisher
   * 8. Edit/Update the existing information about a publisher
 
+## Setup
+To run this project on your machine you need to make sure you have the MySQL JDBC driver installed. You can find the .jar file in this repo. Mac users should copy it to /Library/Java/Extensions  
+We are using a database online so no need to start a database from localhost. Credentials are in the test file.  
+To make sure you setup everything correctly and the JDBC is running on your machine run the TestDatabase file from your shell.  
+
 ## To-Do
 :white_check_mark: Initialize repo  
-:black_square_button: Create database  
+:white_check_mark: Create database  
 :white_check_mark: Compile demo data for tables  
 :black_square_button: Initialize tables with demo data  
 :black_square_button: Code: Query 1  
