@@ -17,14 +17,34 @@ In this project, using JDBC application that access an installed RDBMS (you need
   * 8. Edit/Update the existing information about a publisher
 
 ## Setup
-To run this project on your machine you need to make sure you have the MySQL JDBC driver installed. You can find the .jar file in this repo. Mac users should copy it to /Library/Java/Extensions  
-We are using a database online so no need to start a database from localhost. Credentials are in the test file.  
+To run this project on your machine you need to make sure you have the MySQL JDBC driver installed. You can find the .jar file in this repo. Mac users should copy it to /Library/Java/Extensions    
 To make sure you setup everything correctly and the JDBC is running on your machine run the TestDatabase file from your shell.  
+
+## JDBC API
+To make things a little easier I created an API with the credentials to our database so that you don't have to do the setup yourself. The two methods in the API are as follows:
+```java
+public static void connect() throws SQLException
+public static void close()
+```
+As you can see you need to take care of error handeling if the connection isn't established, so make sure to wrap that method in a try catch block and only precede if the conenction was successful. Here is a little example how your code could look like to open and close connections to our database:
+```java
+try {
+	JDBC.connect();
+	// Your code here
+	JDBC.close();
+} catch (SQLException e) {
+	System.out.println("Connection Failed!");
+	e.printStackTrace();
+	return;
+}
+```
+If you are catching other exepctions make sure to put the close statement into the finally block, but don't close connections that weren't established.  
 
 ## To-Do
 :white_check_mark: Initialize repo  
 :white_check_mark: Create database  
-:white_check_mark: Compile demo data for tables  
+:white_check_mark: Compile demo data for tables 
+:white_check_mark: Created tables    
 :black_square_button: Initialize tables with demo data  
 :black_square_button: Code: Query 1  
 :black_square_button: Code: Query 2  
