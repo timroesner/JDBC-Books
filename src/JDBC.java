@@ -18,12 +18,12 @@ public class JDBC {
 		} catch (ClassNotFoundException e) {
 			System.out.println("Where is your MySQL JDBC Driver?");
 			e.printStackTrace();
-			return;
+			throw new SQLException();
 		}
     	connection = DriverManager
 		.getConnection("jdbc:mysql://sql3.freemysqlhosting.net/sql3203681","sql3203681", "I3HZcVbb6k");
 		if(connection == null) {
-			throw new SQLException("Failed to make connection");
+			throw new SQLException();
 		} else {
 			System.out.println("Successfully connected");
 		}
