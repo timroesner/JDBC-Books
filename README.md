@@ -53,7 +53,7 @@ If you are catching other exepctions make sure to put the close statement into t
 :black_square_button: Code: Query 5  Nit
 :black_square_button: Code: Query 6  Tim
 :black_square_button: Code: Query 7  Avani
-:black_square_button: Code: Query 8  Karan
+:black_square_button: Code: Query 8  Karan , James
 :black_square_button: One/two page documentation of the implementation  
 :black_square_button: Print out two copies of documentation and output  
 :black_square_button: Turn in during class Dec 5  
