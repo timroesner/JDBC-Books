@@ -7,7 +7,7 @@
 import java.sql.*;
 import java.util.*;
 
-public class Query6 {
+public class ExampleQueryLayout {
    
    public static void main(String[] args) {
 	   Statement stmt = null;
