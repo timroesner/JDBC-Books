@@ -45,7 +45,7 @@ If you are catching other exepctions make sure to put the close statement into t
 :white_check_mark: Create database  
 :white_check_mark: Compile demo data for tables  
 :white_check_mark: Created tables    
-:black_square_button: Initialize tables with demo data  Ravin  
+:white_check_mark: Initialize tables with demo data  Ravin  
 :black_square_button: Code: Query 1  Tyler  
 :black_square_button: Code: Query 2  Shri  
 :black_square_button: Code: Query 3  Shweta  
