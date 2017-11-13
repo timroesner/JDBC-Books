@@ -63,7 +63,7 @@ public class InsertTestData {
   }
 
 	private static void updateTitlesTable(){
-		String authorISBN[] = { "0141439518", "0307474278", "0142437629", "0743273565", "0345543240", "0684801223", "1501127625",
+		String isbn[] = { "0141439518", "0307474278", "0142437629", "0743273565", "0345543240", "0684801223", "1501127625",
 				"1501175466", "0307949486", "0451524935", "0439708180", "0142000687", "0547928227", "0385333849", "0553418026" };
 		String editionNumber[] = {"10", "10", "8", "4", "5", "7", "3", "14", "5", "3", "1", "18", "12", "2", "3"};
 		String year[] = {"2002", "2009", "2003", "2004", "2014", "1995", "2015", "2017", "2011", "1961", "1999", "2002", "2012", "1999", "2014"};
@@ -76,9 +76,9 @@ public class InsertTestData {
 			JDBC.connect();
 			stmt = JDBC.connection.createStatement();
 
-			for (int i=0;i<authorISBN.length;i++) {
+			for (int i=0;i<isbn.length;i++) {
         String updateTitlesTable = "INSERT INTO Titles (isbn, title, editionNumber, year, publisherID, price)"
-  					+ "VALUES ('"+authorISBN[i]+"', '"+ title[i] +"', "+ editionNumber[i] +",'"+year[i]+"',"+publisherID[i]+","+price[i]+")";
+  					+ "VALUES ('"+isbn[i]+"', '"+ title[i] +"', "+ editionNumber[i] +",'"+year[i]+"',"+publisherID[i]+","+price[i]+")";
 						stmt.executeUpdate(updateTitlesTable);
 			}
 		} catch (SQLException e) {
