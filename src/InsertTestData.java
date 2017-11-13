@@ -25,10 +25,12 @@ public class InsertTestData {
 		try {
 			JDBC.connect();
 			stmt = JDBC.connection.createStatement();
-
+			//reset the auto increment
+			String updateAuthorsTable = "ALTER TABLE Authors AUTO_INCREMENT = 1";
+			stmt.executeUpdate(updateAuthorsTable);
 			for (int i=1;i<=authorFirstNames.length;i++) {
-        String updateAuthorsTable = "INSERT INTO Authors (authorID, firstName, lastName)"
-  					+ "VALUES ("+i+", '"+ authorFirstNames[i-1] +"', '"+authorLastNames[i-1]+"')";
+        updateAuthorsTable = "INSERT INTO Authors (firstName, lastName)"
+  					+ "VALUES ('"+ authorFirstNames[i-1] +"', '"+authorLastNames[i-1]+"')";
   			stmt.executeUpdate(updateAuthorsTable);
 			}
 		} catch (SQLException e) {
@@ -77,7 +79,7 @@ public class InsertTestData {
 			for (int i=0;i<authorISBN.length;i++) {
         String updateTitlesTable = "INSERT INTO Titles (isbn, title, editionNumber, year, publisherID, price)"
   					+ "VALUES ('"+authorISBN[i]+"', '"+ title[i] +"', "+ editionNumber[i] +",'"+year[i]+"',"+publisherID[i]+","+price[i]+")";
-  			stmt.executeUpdate(updateTitlesTable);
+						stmt.executeUpdate(updateTitlesTable);
 			}
 		} catch (SQLException e) {
 			System.out.println("Connection Failed!");
