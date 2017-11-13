@@ -41,8 +41,8 @@ public class InsertTestData {
 		JDBC.close();
 	}
 
-  private static void updateAuthorISBNTable(){
-    String authorISBN[] = { "0141439518", "0307474278", "0142437629", "0743273565", "0345543240", "0684801223", "1501127625",
+  private static void updateAuthorIsbnTable(){
+    String isbn[] = { "0141439518", "0307474278", "0142437629", "0743273565", "0345543240", "0684801223", "1501127625",
 				"1501175466", "0307949486", "0451524935", "0439708180", "0142000687", "0547928227", "0385333849", "0553418026" };
 		Statement stmt = null;
 		try {
