@@ -11,7 +11,7 @@ public class InsertTestData {
 
 	public static void main(String[] argv) {
 		updateAuthorsTable();
-    updateAuthorISBNTable();
+    updateAuthorIsbnTable();
 		updateTitlesTable();
 		updatePublishersTable();
 	}
@@ -49,9 +49,9 @@ public class InsertTestData {
 			JDBC.connect();
 			stmt = JDBC.connection.createStatement();
 
-			for (int i=1;i<=authorISBN.length;i++) {
+			for (int i=1;i<=isbn.length;i++) {
         String updateAuthorISBNTable = "INSERT INTO authorISBN (authorID, isbn)"
-  					+ "VALUES ("+i+", '"+ authorISBN[i-1] +"')";
+  					+ "VALUES ("+i+", '"+ isbn[i-1] +"')";
   			stmt.executeUpdate(updateAuthorISBNTable);
 			}
 		} catch (SQLException e) {
