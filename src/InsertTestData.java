@@ -96,10 +96,12 @@ public class InsertTestData {
 		try {
 			JDBC.connect();
 			stmt = JDBC.connection.createStatement();
-
-			for (int i=1;i<=publishers.length;i++) {
-        String updatePublishersTable = "INSERT INTO Publishers (publisherID, publisherName)"
-  					+ "VALUES ("+i+", '"+ publishers[i-1] +"')";
+			//reset the auto increment
+			String updatePublishersTable = "ALTER TABLE Publishers AUTO_INCREMENT = 1";
+			stmt.executeUpdate(updatePublishersTable);
+			for (int i=0;i<publishers.length;i++) {
+        updatePublishersTable = "INSERT INTO Publishers (publisherName)"
+  					+ "VALUES ('"+ publishers[i] +"')";
   			stmt.executeUpdate(updatePublishersTable);
 			}
 		} catch (SQLException e) {
