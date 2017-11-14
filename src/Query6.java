@@ -19,7 +19,6 @@ public class Query6 {
 	      // Execute a query
 	      stmt = JDBC.connection.createStatement();
 
-
 	      // Create new publisher for new title
 	      String query6Publisher = "INSERT INTO Publishers (publisherName)" +
 	      				       "VALUES ('Crown')"; 
