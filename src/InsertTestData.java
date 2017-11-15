@@ -26,7 +26,7 @@ public class InsertTestData {
 	}
 
 	private static void updateAuthorsTable(Statement stmt) {
-		String authorFirstNames[] = { "Jane", "Dan", "Ralph Waldo", "F.Scott", "Ernest", "Walter", "Stephen", "Stieg",
+		String authorFirstNames[] = { "Jane", "Dan", "Ralph Waldo", "F.Scott","John", "Ernest", "Walter", "Stephen", "Stieg",
 				"George", "Joanne K.", "John", "John R. R.", "Kurt", "Andy" };
 		String authorLastNames[] = { "Austen", "Brown", "Emerson", "Firtzgerald", "Grisham", "Hemingway", "Isaacson",
 				"King", "Larsson", "Orwell", "Rowling", "Steinbeck", "Tolkien", "Vonnegut", "Weir" };
