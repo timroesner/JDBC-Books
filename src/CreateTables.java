@@ -8,26 +8,16 @@ import java.sql.*;
 import java.util.*;
 
 public class CreateTables {
-   // JDBC driver name and database URL
-   static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-   static final String DB_URL = "jdbc:mysql://sql3.freemysqlhosting.net/sql3203681";
-
-   //  Database credentials
-   static final String USER = "sql3203681";
-   static final String PASS = "I3HZcVbb6k";
    
    public static void main(String[] args) {
-	   Connection conn = null;
 	   Statement stmt = null;
 	   try{
-	      Class.forName(JDBC_DRIVER);
 
 	      // Open a connection
-	      conn = DriverManager.getConnection(DB_URL, USER, PASS);
-	      System.out.println("Connected database successfully");
+	      JDBC.connect();
 	      
 	      // Execute a query
-	      stmt = conn.createStatement();
+	      stmt = JDBC.connection.createStatement();
 	      
 	      String authorsTable = "CREATE TABLE Authors " +
 	                   "(authorID INTEGER NOT NULL AUTO_INCREMENT, " +
@@ -64,26 +54,13 @@ public class CreateTables {
 
 	      stmt.executeUpdate(authorISBNTable);
 	      System.out.println("Created authorISBN table");
+
 	   } catch(SQLException se) {
-	      //Handle errors for JDBC
+	      // Handle errors for JDBC
 	      se.printStackTrace();
-	   } catch(Exception e) {
-	      //Handle errors for Class.forName
-	      e.printStackTrace();
 	   } finally {
-	      //finally block used to close resources
-	      try {
-	         if(stmt!=null)
-	            conn.close();
-	      } catch(SQLException se) {
-	      }// do nothing
-	      try {
-	         if(conn!=null)
-	            conn.close();
-	        	System.out.println("Connection closed");
-	      } catch(SQLException se) {
-	         se.printStackTrace();
-	      }
+	      // Finally block, used to close resources
+	      JDBC.close();
 	   }
 	}
 }
