@@ -21,7 +21,7 @@ public class JDBC {
 			throw new SQLException();
 		}
     	connection = DriverManager
-		.getConnection("jdbc:mysql://sql3.freemysqlhosting.net/sql3203681","sql3203681", "I3HZcVbb6k");
+		.getConnection("jdbc:mysql://mysql6.gear.host/books3?autoReconnect=true&useSSL=false","books3", "Pf69!-47Wtuz");
 		if(connection == null) {
 			throw new SQLException();
 		} else {
