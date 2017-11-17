@@ -10,6 +10,10 @@ import java.util.*;
 public class InsertTestData {
 
 	public static void main(String[] argv) {
+		updateTables();
+	}
+
+	public static void updateTables(){
 		try {
 			JDBC.connect();
 			Statement stmt = JDBC.connection.createStatement();
