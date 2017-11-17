@@ -17,26 +17,26 @@ public class CreateTables {
 		Scanner scanner = new Scanner(System.in);
 		String input = scanner.nextLine();
 
-		if(input == "y" || input == "Y") {
+		if(input.equals("y") || input.equals("Y") ) {
 			// Open a connection
 		    JDBC.connect();
+		    stmt = JDBC.connection.createStatement();
 
 		    // Drop Tables
-		    String drop1 = "IF EXISTS(select * from sysobjects where name='Authors') DROP TABLE Authors ";
+		    String drop1 = "DROP TABLE IF EXISTS Authors ";
 		  	stmt.executeUpdate(drop1);
 
-		  	String drop2 = "IF EXISTS(select * from sysobjects where name='Titles') DROP TABLE Titles ";
+		  	String drop2 = "DROP TABLE IF EXISTS Titles ";
 		  	stmt.executeUpdate(drop2);
 
-		  	String drop3 = "IF EXISTS(select * from sysobjects where name='Publishers') DROP TABLE Publishers ";
+		  	String drop3 = "DROP TABLE IF EXISTS Publishers ";
 		  	stmt.executeUpdate(drop3);
 
-		  	String drop4 = "IF EXISTS(select * from sysobjects where name='authorISBN') DROP TABLE authorISBN ";
+		  	String drop4 = "DROP TABLE IF EXISTS authorISBN ";
 		  	stmt.executeUpdate(drop4);
+		  	System.out.println("Data deleted");
 		      
 		    // Create Tables
-		    stmt = JDBC.connection.createStatement();
-		      
 		    String authorsTable = "CREATE TABLE Authors " +
 		                   "(authorID INTEGER NOT NULL AUTO_INCREMENT, " +
 		                   " firstName CHAR(20), " + 
@@ -73,12 +73,15 @@ public class CreateTables {
 		    stmt.executeUpdate(authorISBNTable);
 		    System.out.println("Created authorISBN table");
 		}
+		
 	   } catch(SQLException se) {
 	      // Handle errors for JDBC
 	      se.printStackTrace();
 	   } finally {
 	      // Finally block, used to close resources
-	      JDBC.close();
+	   	  if(stmt != null) {
+	   	  	JDBC.close();
+	   	  }
 	   }
 	}
 }
