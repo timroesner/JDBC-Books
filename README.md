@@ -49,7 +49,7 @@ If you are catching other exepctions make sure to put the close statement into t
 :black_square_button: Code: Query 1  Tyler  
 :black_square_button: Code: Query 2  Shri  
 :black_square_button: Code: Query 3  Shweta  
-:black_square_button: Code: Query 4  Shivangi  
+:white_check_mark: Code: Query 4  Shivangi  
 :black_square_button: Code: Query 5  Nit  
 :white_check_mark: Code: Query 6  Tim  
 :black_square_button: Code: Query 7  Avani  
