@@ -28,8 +28,18 @@ public class queryLayout {
 	       */
 	      String query = "SELECT * FROM authors ORDER BY lastName , firstName "; 
 
-	      stmt.executeUpdate(query);
-	      System.out.println("Executed Query");
+	      
+	      System.out.println("Alphabatized all rows by first and last name:");
+	      
+	      ResultSet rs1 = stmt.executeQuery(exampleQuery1);
+	      
+	      
+	      while (rs1.next()) {
+	          	int id = rs1.getInt("authorID");
+	            String firstName = rs1.getString("firstName");
+	            String lastName = rs1.getString("lastName");
+	            System.out.println(id + "\t" + firstName + "\t" + lastName);
+	          }
 
 	   } catch(SQLException se) {
 	      //Handle errors for JDBC
