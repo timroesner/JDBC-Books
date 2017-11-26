@@ -27,7 +27,7 @@ public class Query7 {
 	      
 	      System.out.println("Added publisher 'Random House':");
 	      
-	      ResultSet rs1 = stmt.executeQuery(exampleQuery1);
+	      ResultSet rs1 = stmt.executeQuery(query);
 	      
 	      
 	      while (rs1.next()) {
