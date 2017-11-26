@@ -31,7 +31,7 @@ public class Query1 {
 	      
 	      System.out.println("Alphabatized all rows by first and last name:");
 	      
-	      ResultSet rs1 = stmt.executeQuery(exampleQuery1);
+	      ResultSet rs1 = stmt.executeQuery(query);
 	      
 	      
 	      while (rs1.next()) {
