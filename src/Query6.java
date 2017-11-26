@@ -1,6 +1,6 @@
 /**
- * JDBC-Books
- * Authors: Tim Roesner,
+ * Query 1
+ * Authors: Tyler Bruno
  * CS 157A
  */
 
