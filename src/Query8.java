@@ -44,7 +44,10 @@ public class Query8 {
                System.out.println(id + "\t" + pubName);
            }
            
-
+           // Reset the Information
+           String resetQuery = "UPDATE publishers SET publisherName='Penguin' WHERE publisherID = 1";
+           stmt.executeUpdate(resetQuery);
+           
        } catch(SQLException se) {
            //Handle errors for JDBC
            se.printStackTrace();
