@@ -1,6 +1,6 @@
 /**
  * Query 1
- * Authors: Tyler Bruno
+ * Authors: Tim Roesner,
  * CS 157A
  */
 
