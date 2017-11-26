@@ -23,7 +23,19 @@ public class Query4 {
 	      String query4Author = "INSERT INTO Authors (authorID, firstName, lastName)" +
 	      				       "VALUES ('16', 'William', 'Shakespeare')"; 
 	      stmt.executeUpdate(query4Author);
-	      System.out.println("Added Author");
+	      System.out.println("Added Author 'William Shakespeare'");
+
+	      String query = "SELECT * FROM authors"; 
+	      
+	      ResultSet rs1 = stmt.executeQuery(query);
+	      
+	      
+	      while (rs1.next()) {
+	          	int id = rs1.getInt("authorID");
+	            String firstName = rs1.getString("firstName");
+	            String lastName = rs1.getString("lastName");
+	            System.out.println(id + "\t" + firstName + "\t" + lastName);
+	          }
 
 	      
 
