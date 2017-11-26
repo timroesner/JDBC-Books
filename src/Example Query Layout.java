@@ -25,10 +25,10 @@ public class ExampleQueryLayout {
 	      System.out.println("Executed Example Query");
 
 	   } catch(SQLException se) {
-	      //Handle errors for JDBC
+	      // Handle errors for JDBC
 	      se.printStackTrace();
 	   } finally {
-	      //finally block used to close resources
+	      // Finally block, used to close resources
 	      JDBC.close();
 	   }
 	}

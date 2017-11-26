@@ -29,13 +29,13 @@ public static void close()
 As you can see you need to take care of error handeling if the connection isn't established, so make sure to wrap that method in a try catch block and only precede if the conenction was successful. Here is a little example how your code could look like to open and close connections to our database:
 ```java
 try {
-	JDBC.connect();
-	// Your code here
-	JDBC.close();
+  JDBC.connect();
+  // Your code here
+  JDBC.close();
 } catch (SQLException e) {
-	System.out.println("Connection Failed!");
-	e.printStackTrace();
-	return;
+  System.out.println("Connection Failed!");
+  e.printStackTrace();
+  return;
 }
 ```
 If you are catching other exepctions make sure to put the close statement into the finally block, but don't close connections that weren't established.  
@@ -45,13 +45,13 @@ If you are catching other exepctions make sure to put the close statement into t
 :white_check_mark: Create database  
 :white_check_mark: Compile demo data for tables  
 :white_check_mark: Created tables    
-:black_square_button: Initialize tables with demo data  Ravin  
+:white_check_mark: Initialize tables with demo data  Ravin  
 :black_square_button: Code: Query 1  Tyler  
 :black_square_button: Code: Query 2  Shri  
 :black_square_button: Code: Query 3  Shweta  
-:black_square_button: Code: Query 4  Shivangi  
+:white_check_mark: Code: Query 4  Shivangi  
 :black_square_button: Code: Query 5  Nit  
-:black_square_button: Code: Query 6  Tim  
+:white_check_mark: Code: Query 6  Tim  
 :black_square_button: Code: Query 7  Avani  
 :black_square_button: Code: Query 8  Karan , James  
 :black_square_button: One/two page documentation of the implementation  
