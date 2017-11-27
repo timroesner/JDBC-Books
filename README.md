@@ -48,7 +48,7 @@ If you are catching other exepctions make sure to put the close statement into t
 :white_check_mark: Initialize tables with demo data  Ravin  
 :black_square_button: Code: Query 1  Tyler  
 :white_check_mark: Code: Query 2  Shri  
-:black_square_button: Code: Query 3  Shweta  
+:white_check_mark: Code: Query 3  Shweta  
 :white_check_mark: Code: Query 4  Shivangi  
 :white_check_mark: Code: Query 5  Nit  
 :white_check_mark: Code: Query 6  Tim  
