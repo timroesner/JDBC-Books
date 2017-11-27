@@ -31,8 +31,10 @@ public class JDBC {
 
     public static void close() {
     	try {
-			connection.close();
-			System.out.println("Closing connection");
+    		if(connection != null) {
+    			connection.close();
+				System.out.println("Closing connection");
+    		}
 		} catch (SQLException e) {
 			System.out.println("Failed to close connection!");
 		}
