@@ -64,6 +64,10 @@ public class Query5 {
 				String lastName = rs2.getString("lastName");
 				System.out.println(id + "\t" + firstName + "\t" + lastName);
 			}
+			
+			String query5AuthorToOriginal = "UPDATE authors SET firstName = 'William' WHERE authorID= 16";
+			stmt.executeUpdate(query5AuthorToOriginal);
+
 
 		} catch(SQLException se) {
 			//Handle errors for JDBC
