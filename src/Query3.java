@@ -22,22 +22,31 @@ public class Query3 {
 	      
 	      // Execute a query
 	      stmt = JDBC.connection.createStatement();
-	      
-	      String query3_publisher = "SELECT isbn, title, year FROM Titles WHERE publisherID=1 ORDER BY title"; 
+          
+          String query3 = "SELECT isbn, title, year, publisherID FROM titles WHERE publisherID=3 ORDER BY title";
+           
+	      ResultSet rs = stmt.executeQuery(query3);
+	      System.out.println();
+          System.out.println("--------------------------------------------------");
           System.out.println("List of books by selected publisher");
-          System.out.println("-----------------------------------");
-          ResultSet rs3 = stmt.executeQuery(query3_publisher);
-          while(rs3.next()){
-              int isbn = rs3.getInt("isbn");
-              String title = rs3.getString("title");
-              int year = rs3.getInt("year");
-              int id = rs3.getInt("publisherID");
-              System.out.println(id + "\t" + title + "\t" + year + "\t" + isbn);
+          System.out.println("--------------------------------------------------");
+
+          while(rs.next()){
+                  int id = rs.getInt("publisherID");
+                  String isbn = rs.getString("isbn");
+                  String title = rs.getString("title");
+                  String year = rs.getString("year");
+                  System.out.println(id + " - " + title + " - " + year + " - " + isbn);
+              
+              
           }
+          System.out.println("--------------------------------------------------");
+          System.out.println();
 	      
 
 	   } catch(SQLException se) {
 	      // Handle errors for JDBC
+          System.out.println("Connection Failed!");
 	      se.printStackTrace();
 	   } finally {
 	      // Finally block, used to close resources
