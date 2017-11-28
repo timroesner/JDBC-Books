@@ -17,10 +17,9 @@ public class Query7 {
 			
 			stmt = JDBC.connection.createStatement();
 			
-			String query4Publisher = "INSERT INTO Publishers(publisherID, publisherName)" + "VALUES('12', 'Random House')";
+			String query4Publisher = "INSERT INTO Publishers(publisherName)" + "VALUES('Random House')";
 			
 			stmt.executeUpdate(query4Publisher);
-			System.out.println("Added Publisher");
 
 			String query = "SELECT * FROM publishers"; 
 
