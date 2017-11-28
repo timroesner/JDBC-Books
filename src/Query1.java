@@ -1,13 +1,13 @@
 /**
  * JDBC-Books
- * Authors: Tim Roesner,
+ * Authors: Tyler Bruno
  * CS 157A
  */
 
 import java.sql.*;
 import java.util.*;
 
-public class queryLayout {
+public class Query1 {
    
    public static void main(String[] args) {
 	   Statement stmt = null;
@@ -31,14 +31,14 @@ public class queryLayout {
 	      
 	      System.out.println("Alphabatized all rows by first and last name:");
 	      
-	      ResultSet rs1 = stmt.executeQuery(exampleQuery1);
+	      ResultSet rs1 = stmt.executeQuery(query);
 	      
 	      
 	      while (rs1.next()) {
 	          	int id = rs1.getInt("authorID");
 	            String firstName = rs1.getString("firstName");
 	            String lastName = rs1.getString("lastName");
-	            System.out.println(id + "\t" + firstName + "\t" + lastName);
+	            System.out.println(id + "\t" + firstName + "\t\t" + lastName);
 	          }
 
 	   } catch(SQLException se) {
